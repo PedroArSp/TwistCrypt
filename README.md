@@ -20,6 +20,31 @@ class TwistEncrypt(builtins.object)
  |
  |  TwistEncrypt
  |  Classe para implementar criptografia Twist
+ |  Baseado em um trabalho pedido em cursos da USP pelo Departamento de Ciência da
+ |  Computação (DCC)
+ |  Methods defined here:
+ |
+ |  __init__(self, Key=1) -> None
+ |      Args:
+ |      Key (int, optional): chave, preferente primo com KEYORDER. Defaults to 1.
+ |
+ |  desencriptar(self, inTexto: str) -> str
+ |      _desencriptar_
+ |
+ |      Args:
+ |          inTexto (str): texto a descriptografar
+ |
+ |      Returns:
+ |          str: _texto desencriptado_
+ |
+ |  encriptar(self, inTexto: str) -> str
+ |      _encriptar_
+ |
+ |      Args:
+ |          inTexto (str): Texto a criptografar
+ |
+ |      Returns:
+ |          str: _texto encriptado_
  |
  |  ----------------------------------------------------------------------
  |  Data descriptors defined here:
@@ -29,10 +54,9 @@ class TwistEncrypt(builtins.object)
  |
  |  __weakref__
  |      list of weak references to the object (if defined)
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Data and other attributes defined here:
- |  
+ |
  |  KEYORDER = 28
  ```
- 

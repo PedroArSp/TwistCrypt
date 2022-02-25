@@ -11,9 +11,7 @@ class TwistEncrypt:
     KEYORDER = _nTransCodigo
 
     def __init__(self,Key=1) -> None:
-        """_summary_
-
-        Args:
+        """   Args:
             Key (int, optional): chave, preferente primo com KEYORDER. Defaults to 1.
         """
         self.key = Key
@@ -26,6 +24,14 @@ class TwistEncrypt:
             return 0
 
     def encriptar(self,inTexto:str)->str:
+        """_encriptar_
+
+        Args:
+            inTexto (str): Texto a criptografar
+
+        Returns:
+            str: _texto encriptado_
+        """
         codigoPlano = [self._getTranscodigo(letra) for letra in inTexto]
         cifraCodigo=[]
         ln = len(codigoPlano)
@@ -35,6 +41,14 @@ class TwistEncrypt:
         return textoCifrado
 
     def desencriptar(self,inTexto:str)->str:
+        """_desencriptar_
+
+        Args:
+            inTexto (str): texto a descriptografar
+
+        Returns:
+            str: _texto desencriptado_
+        """
         cifraCodigo = [self._getTranscodigo(letra) for letra in inTexto]
         ln = len(cifraCodigo)
         codigoPlano = [0] * ln
